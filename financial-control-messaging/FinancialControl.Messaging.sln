@@ -1,0 +1,85 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{382FD28F-0E0A-4C00-A3BF-912DDFF5AC35}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinancialControl.Messaging", "src\FinancialControl.Messaging\FinancialControl.Messaging.csproj", "{FF3D6946-BF89-47A5-9515-66F145E4AE7A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinancialControl.Application", "src\FinancialControl.Application\FinancialControl.Application.csproj", "{1513CE72-70E2-4DED-8768-8371F2B17DB2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinancialControl.Domain", "src\FinancialControl.Domain\FinancialControl.Domain.csproj", "{AFD64A3F-2F85-4735-B095-18FA02F73CF1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinancialControl.Infra", "src\FinancialControl.Infra\FinancialControl.Infra.csproj", "{642B45C4-002C-4C71-AE42-5D8E16AB773D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinancialControl.IoC", "src\FinancialControl.IoC\FinancialControl.IoC.csproj", "{7AEDA67D-D2DE-4952-B113-23A4955D5667}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{C4AEE302-3717-4BD5-9C25-6E6C7AFEE4D3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinancialControl.Messaging.Tests", "tests\FinancialControl.Messaging.Tests\FinancialControl.Messaging.Tests.csproj", "{48B87004-E46E-4722-ADF9-9BB6C7304928}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinancialControl.Application.Tests", "tests\FinancialControl.Application.Tests\FinancialControl.Application.Tests.csproj", "{B242F94F-C330-4C3F-80DB-FC2CCD70F28E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinancialControl.Domain.Tests", "tests\FinancialControl.Domain.Tests\FinancialControl.Domain.Tests.csproj", "{1B4D2319-65B2-4935-84E4-D0610BA100F6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinancialControl.Infra.Tests", "tests\FinancialControl.Infra.Tests\FinancialControl.Infra.Tests.csproj", "{FFA55ECB-C2E4-46DB-B026-6994DE25B468}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FF3D6946-BF89-47A5-9515-66F145E4AE7A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF3D6946-BF89-47A5-9515-66F145E4AE7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF3D6946-BF89-47A5-9515-66F145E4AE7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF3D6946-BF89-47A5-9515-66F145E4AE7A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1513CE72-70E2-4DED-8768-8371F2B17DB2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1513CE72-70E2-4DED-8768-8371F2B17DB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1513CE72-70E2-4DED-8768-8371F2B17DB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1513CE72-70E2-4DED-8768-8371F2B17DB2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AFD64A3F-2F85-4735-B095-18FA02F73CF1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AFD64A3F-2F85-4735-B095-18FA02F73CF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AFD64A3F-2F85-4735-B095-18FA02F73CF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AFD64A3F-2F85-4735-B095-18FA02F73CF1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{642B45C4-002C-4C71-AE42-5D8E16AB773D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{642B45C4-002C-4C71-AE42-5D8E16AB773D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{642B45C4-002C-4C71-AE42-5D8E16AB773D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{642B45C4-002C-4C71-AE42-5D8E16AB773D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7AEDA67D-D2DE-4952-B113-23A4955D5667}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7AEDA67D-D2DE-4952-B113-23A4955D5667}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7AEDA67D-D2DE-4952-B113-23A4955D5667}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7AEDA67D-D2DE-4952-B113-23A4955D5667}.Release|Any CPU.Build.0 = Release|Any CPU
+		{48B87004-E46E-4722-ADF9-9BB6C7304928}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48B87004-E46E-4722-ADF9-9BB6C7304928}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48B87004-E46E-4722-ADF9-9BB6C7304928}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48B87004-E46E-4722-ADF9-9BB6C7304928}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B242F94F-C330-4C3F-80DB-FC2CCD70F28E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B242F94F-C330-4C3F-80DB-FC2CCD70F28E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B242F94F-C330-4C3F-80DB-FC2CCD70F28E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B242F94F-C330-4C3F-80DB-FC2CCD70F28E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B4D2319-65B2-4935-84E4-D0610BA100F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B4D2319-65B2-4935-84E4-D0610BA100F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B4D2319-65B2-4935-84E4-D0610BA100F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B4D2319-65B2-4935-84E4-D0610BA100F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FFA55ECB-C2E4-46DB-B026-6994DE25B468}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FFA55ECB-C2E4-46DB-B026-6994DE25B468}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FFA55ECB-C2E4-46DB-B026-6994DE25B468}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FFA55ECB-C2E4-46DB-B026-6994DE25B468}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{FF3D6946-BF89-47A5-9515-66F145E4AE7A} = {382FD28F-0E0A-4C00-A3BF-912DDFF5AC35}
+		{1513CE72-70E2-4DED-8768-8371F2B17DB2} = {382FD28F-0E0A-4C00-A3BF-912DDFF5AC35}
+		{AFD64A3F-2F85-4735-B095-18FA02F73CF1} = {382FD28F-0E0A-4C00-A3BF-912DDFF5AC35}
+		{642B45C4-002C-4C71-AE42-5D8E16AB773D} = {382FD28F-0E0A-4C00-A3BF-912DDFF5AC35}
+		{7AEDA67D-D2DE-4952-B113-23A4955D5667} = {382FD28F-0E0A-4C00-A3BF-912DDFF5AC35}
+		{48B87004-E46E-4722-ADF9-9BB6C7304928} = {C4AEE302-3717-4BD5-9C25-6E6C7AFEE4D3}
+		{B242F94F-C330-4C3F-80DB-FC2CCD70F28E} = {C4AEE302-3717-4BD5-9C25-6E6C7AFEE4D3}
+		{1B4D2319-65B2-4935-84E4-D0610BA100F6} = {C4AEE302-3717-4BD5-9C25-6E6C7AFEE4D3}
+		{FFA55ECB-C2E4-46DB-B026-6994DE25B468} = {C4AEE302-3717-4BD5-9C25-6E6C7AFEE4D3}
+	EndGlobalSection
+EndGlobal

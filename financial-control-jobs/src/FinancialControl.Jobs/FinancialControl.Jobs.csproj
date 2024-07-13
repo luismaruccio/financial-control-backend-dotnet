@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\FinancialControl.Application\FinancialControl.Application.csproj" />
+    <ProjectReference Include="..\FinancialControl.Domain\FinancialControl.Domain.csproj" />
+    <ProjectReference Include="..\FinancialControl.Infra\FinancialControl.Infra.csproj" />
+    <ProjectReference Include="..\FinancialControl.IoC\FinancialControl.IoC.csproj" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+</Project>
