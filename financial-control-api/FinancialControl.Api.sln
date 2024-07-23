@@ -5,33 +5,32 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{B15C3C09-262F-4E3D-848A-878A8C40A1F7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinancialControl.Api", "src\FinancialControl.Api\FinancialControl.Api.csproj", "{7B8234E3-ACFB-4360-93EA-EDBD338EC028}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FinancialControl.Api", "src\FinancialControl.Api\FinancialControl.Api.csproj", "{7B8234E3-ACFB-4360-93EA-EDBD338EC028}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinancialControl.Application", "src\FinancialControl.Application\FinancialControl.Application.csproj", "{9C037B6F-A8DA-4B34-9601-632D80EAC3E6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FinancialControl.Application", "src\FinancialControl.Application\FinancialControl.Application.csproj", "{9C037B6F-A8DA-4B34-9601-632D80EAC3E6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinancialControl.Domain", "src\FinancialControl.Domain\FinancialControl.Domain.csproj", "{23C6BE77-5197-4C8E-AA83-1B8079975646}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FinancialControl.Domain", "src\FinancialControl.Domain\FinancialControl.Domain.csproj", "{23C6BE77-5197-4C8E-AA83-1B8079975646}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinancialControl.Infra", "src\FinancialControl.Infra\FinancialControl.Infra.csproj", "{494D5D68-4C32-479A-8B1D-4FB6AE3A5248}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FinancialControl.Infra", "src\FinancialControl.Infra\FinancialControl.Infra.csproj", "{494D5D68-4C32-479A-8B1D-4FB6AE3A5248}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinancialControl.IoC", "src\FinancialControl.IoC\FinancialControl.IoC.csproj", "{BABD4EB1-A662-42ED-97A3-EED3D3A09A9B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FinancialControl.IoC", "src\FinancialControl.IoC\FinancialControl.IoC.csproj", "{BABD4EB1-A662-42ED-97A3-EED3D3A09A9B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{27A786B4-1228-4883-8FC0-8AF641539CB4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinancialControl.Api.Tests", "tests\FinancialControl.Api.Tests\FinancialControl.Api.Tests.csproj", "{D46AF1FB-EAD1-47A6-BED3-1608133A6BB5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FinancialControl.Api.Tests", "tests\FinancialControl.Api.Tests\FinancialControl.Api.Tests.csproj", "{D46AF1FB-EAD1-47A6-BED3-1608133A6BB5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinancialControl.Application.Tests", "tests\FinancialControl.Application.Tests\FinancialControl.Application.Tests.csproj", "{6B06E65C-2168-4024-AA0E-69C2D0AC00F7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FinancialControl.Application.Tests", "tests\FinancialControl.Application.Tests\FinancialControl.Application.Tests.csproj", "{6B06E65C-2168-4024-AA0E-69C2D0AC00F7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinancialControl.Domain.Tests", "tests\FinancialControl.Domain.Tests\FinancialControl.Domain.Tests.csproj", "{45F62FB4-99C2-4E29-8881-FC03735E5148}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FinancialControl.Domain.Tests", "tests\FinancialControl.Domain.Tests\FinancialControl.Domain.Tests.csproj", "{45F62FB4-99C2-4E29-8881-FC03735E5148}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinancialControl.Infra.Tests", "tests\FinancialControl.Infra.Tests\FinancialControl.Infra.Tests.csproj", "{4984C9EE-8E80-4965-A590-845C9D94F61D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FinancialControl.Infra.Tests", "tests\FinancialControl.Infra.Tests\FinancialControl.Infra.Tests.csproj", "{4984C9EE-8E80-4965-A590-845C9D94F61D}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{2A098DBF-2953-4162-A19F-D89A1711D665}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{7B8234E3-ACFB-4360-93EA-EDBD338EC028}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -70,6 +69,13 @@ Global
 		{4984C9EE-8E80-4965-A590-845C9D94F61D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4984C9EE-8E80-4965-A590-845C9D94F61D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4984C9EE-8E80-4965-A590-845C9D94F61D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A098DBF-2953-4162-A19F-D89A1711D665}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A098DBF-2953-4162-A19F-D89A1711D665}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A098DBF-2953-4162-A19F-D89A1711D665}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A098DBF-2953-4162-A19F-D89A1711D665}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{7B8234E3-ACFB-4360-93EA-EDBD338EC028} = {B15C3C09-262F-4E3D-848A-878A8C40A1F7}
