@@ -360,4 +360,11 @@ MigrationBackup/
 .ionide/
 
 # Fody - auto-generated XML schema
-FodyWeavers.xsd
+FodyWeavers.xsd\
+
+# Ignore appsettings.Development.json
+appsettings.Development.json
+
+# Ignore sonarqube folder and Files
+.sonarqube/
+*.ps1
