@@ -15,24 +15,11 @@ namespace FinancialControl.Infra.Data.Configurations
 
             builder.HasKey(u => u.Id);
 
-            builder.Property(u => u.Id)
-                .IsRequired()
-                .ValueGeneratedOnAdd();
-
-            builder.Property(u => u.Name)
-                .IsRequired()
-                .HasMaxLength(100);
-
-            builder.Property(u => u.Email)
-                .IsRequired()
-                .HasMaxLength(200);
-
-            builder.Property(u => u.PasswordHash)
-                .IsRequired();
-
-            builder.Property(u => u.EmailVerified)
-                .IsRequired()
-                .HasDefaultValue(false);
+            builder.Property(u => u.Id).IsRequired().ValueGeneratedOnAdd();
+            builder.Property(u => u.Name).IsRequired().HasMaxLength(100);
+            builder.Property(u => u.Email).IsRequired().HasMaxLength(200);
+            builder.Property(u => u.PasswordHash).IsRequired();
+            builder.Property(u => u.EmailVerified).IsRequired().HasDefaultValue(false);
         }
     }
 }

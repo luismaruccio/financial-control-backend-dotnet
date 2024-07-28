@@ -14,9 +14,9 @@ namespace FinancialControl.Infra.Repositories.Shareds
             return await _context.Set<T>().ToListAsync();
         }
 
-        public async Task<T?> GetByIdAsync(int id)
+        public async Task<T?> GetByIdAsync(params object[] keyValues)
         {
-            return await _context.Set<T>().FindAsync(id);
+            return await _context.Set<T>().FindAsync(keyValues);
         }
 
         public async Task AddAsync(T entity)

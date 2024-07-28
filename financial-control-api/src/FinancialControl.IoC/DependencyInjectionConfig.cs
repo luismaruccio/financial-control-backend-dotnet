@@ -24,6 +24,7 @@ namespace FinancialControl.IoC
 
             // Infra
             services.AddScoped<IUserRepository, UserRepository>();
+            services.AddScoped<IValidationCodeRepository, ValidationCodeRepository>();
 
             return services;
         }

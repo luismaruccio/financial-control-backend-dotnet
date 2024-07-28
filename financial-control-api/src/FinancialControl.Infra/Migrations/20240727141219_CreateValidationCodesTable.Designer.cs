@@ -3,6 +3,7 @@ using System;
 using FinancialControl.Infra.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
@@ -11,9 +12,11 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace FinancialControl.Infra.Migrations
 {
     [DbContext(typeof(FinancialControlContext))]
-    partial class FinancialControlContextModelSnapshot : ModelSnapshot
+    [Migration("20240727141219_CreateValidationCodesTable")]
+    partial class CreateValidationCodesTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

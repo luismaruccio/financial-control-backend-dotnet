@@ -1,0 +1,5 @@
+Migration commands
+On FinancialControl.Infra, run this command to create a migration:
+dotnet ef migrations add [name] --output-dir Migrations --startup-project ../FinancialControl.Api
+and this command to update the database:
+dotnet ef database update --startup-project ../FinancialControl.Api

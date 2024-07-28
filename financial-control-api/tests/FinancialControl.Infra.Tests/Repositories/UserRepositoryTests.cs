@@ -1,16 +1,21 @@
 ﻿using FinancialControl.Domain.Entities;
 using FinancialControl.Infra.Repositories;
-using FinancialControl.Infra.Tests.Utilities;
+using FinancialControl.Infra.Tests.Repositories.Shared;
 
 namespace FinancialControl.Infra.Tests.Repositories
 {
-    public class UserRepositoryTests
+    public class UserRepositoryTests : TestBase
     {
+        private readonly UserRepository _repository;
+
+        public UserRepositoryTests()
+        {
+            _repository = new UserRepository(Context);
+        }
+
         [Fact]
         public async Task AddAsync_ShouldAddUser()
         {
-            var context = InMemoryDbContextFactory.Create();
-            var repository = new UserRepository(context);
             var user = new User
             {
                 Name = "Test User",
@@ -18,20 +23,16 @@ namespace FinancialControl.Infra.Tests.Repositories
                 PasswordHash = "hashedpassword"
             };
 
-            await repository.AddAsync(user);
-            var users = await repository.GetAllAsync();
+            await _repository.AddAsync(user);
+            var users = await _repository.GetAllAsync();
 
             Assert.Single(users);
             Assert.Equal("Test User", users.First().Name);
-
-            InMemoryDbContextFactory.Destroy(context);
         }
 
         [Fact]
         public async Task GetByIdAsync_ShouldReturnUser()
         {
-            var context = InMemoryDbContextFactory.Create();
-            var repository = new UserRepository(context);
             var user = new User
             {
                 Name = "Test User",
@@ -39,21 +40,17 @@ namespace FinancialControl.Infra.Tests.Repositories
                 PasswordHash = "hashedpassword"
             };
 
-            await repository.AddAsync(user);
+            await _repository.AddAsync(user);
 
-            var retrievedUser = await repository.GetByIdAsync(user.Id);
+            var retrievedUser = await _repository.GetByIdAsync(user.Id);
 
             Assert.NotNull(retrievedUser);
             Assert.Equal("Test User", retrievedUser.Name);
-
-            InMemoryDbContextFactory.Destroy(context);
         }
 
         [Fact]
         public async Task GetAllAsync_ShouldReturnAllUsers()
         {
-            var context = InMemoryDbContextFactory.Create();
-            var repository = new UserRepository(context);
             var user1 = new User
             {
                 Name = "Test User 1",
@@ -67,21 +64,17 @@ namespace FinancialControl.Infra.Tests.Repositories
                 PasswordHash = "hashedpassword2"
             };
 
-            await repository.AddAsync(user1);
-            await repository.AddAsync(user2);
+            await _repository.AddAsync(user1);
+            await _repository.AddAsync(user2);
 
-            var users = await repository.GetAllAsync();
+            var users = await _repository.GetAllAsync();
 
             Assert.Equal(2, users.Count());
-
-            InMemoryDbContextFactory.Destroy(context);
         }
 
         [Fact]
         public async Task UpdateAsync_ShouldUpdateUser()
         {
-            var context = InMemoryDbContextFactory.Create();
-            var repository = new UserRepository(context);
             var user = new User
             {
                 Name = "Test User",
@@ -90,22 +83,19 @@ namespace FinancialControl.Infra.Tests.Repositories
                 EmailVerified = true
             };
 
-            await repository.AddAsync(user);
+            await _repository.AddAsync(user);
 
             user.Name = "Teste User Updated";
-            await repository.UpdateAsync(user);
-            var updatedUser = await repository.GetByIdAsync(user.Id);
+            await _repository.UpdateAsync(user);
+            var updatedUser = await _repository.GetByIdAsync(user.Id);
 
             Assert.Equal("Teste User Updated", updatedUser!.Name);
 
-            InMemoryDbContextFactory.Destroy(context);
         }
 
         [Fact]
         public async Task DeleteAsync_ShouldRemoveUser()
         {
-            var context = InMemoryDbContextFactory.Create();
-            var repository = new UserRepository(context);
             var user = new User
             {
                 Name = "Test User",
@@ -113,21 +103,17 @@ namespace FinancialControl.Infra.Tests.Repositories
                 PasswordHash = "hashedpassword"
             };
 
-            await repository.AddAsync(user);
+            await _repository.AddAsync(user);
 
-            await repository.DeleteAsync(user);
-            var users = await repository.GetAllAsync();
+            await _repository.DeleteAsync(user);
+            var users = await _repository.GetAllAsync();
 
             Assert.Empty(users);
-
-            InMemoryDbContextFactory.Destroy(context);
         }
 
         [Fact]
         public async Task GetByEmailAsync_ShouldGetUserByEmail()
         {
-            var context = InMemoryDbContextFactory.Create();
-            var repository = new UserRepository(context);
             var user = new User
             {
                 Name = "Test User",
@@ -135,13 +121,11 @@ namespace FinancialControl.Infra.Tests.Repositories
                 PasswordHash = "hashedpassword"
             };
 
-            await repository.AddAsync(user);
+            await _repository.AddAsync(user);
 
-            var retornedUser = await repository.GetByEmailAsync(user.Email);
+            var retornedUser = await _repository.GetByEmailAsync(user.Email);
 
             Assert.IsType<User>(retornedUser);
-
-            InMemoryDbContextFactory.Destroy(context);
         }
     }
 }
