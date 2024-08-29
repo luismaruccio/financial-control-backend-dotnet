@@ -6,10 +6,11 @@ using Microsoft.Extensions.Logging;
 
 namespace FinancialControl.Application.Services
 {
-    public class UserService(IUserRepository userRepository, IEncryptionService encryptionService, ILogger<UserService> logger) : IUserService
+    public class UserService(IUserRepository userRepository, IEncryptionService encryptionService, IValidationEmailService validationEmailService, ILogger<UserService> logger) : IUserService
     {
         private readonly IUserRepository _userRepository = userRepository;
         private readonly IEncryptionService _encryptionService = encryptionService;
+        private readonly IValidationEmailService _validationEmailService = validationEmailService;
         private readonly ILogger<UserService> _logger = logger;
 
         public async Task CreateUserAsync(CreateUserRequest request)
@@ -32,6 +33,8 @@ namespace FinancialControl.Application.Services
 
             await _userRepository.AddAsync(user);
             _logger.LogInformation("User created successfully with email: {Email}", request.Email);
+
+            await _validationEmailService.SendValidationEmailAsync(user);
 
         }
     }

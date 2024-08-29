@@ -13,8 +13,9 @@ namespace FinancialControl.Application.Tests.Services
     {
         private readonly Mock<IUserRepository> _userRepositoryMock;
         private readonly Mock<IEncryptionService> _encryptionServiceMock;
+        private readonly Mock<IValidationEmailService> _validationEmailServiceMock;
         private readonly Mock<ILogger<UserService>> _loggerMock;
-        private readonly UserService _userService;
+        private readonly UserService _userService;        
         private readonly Fixture _fixture;
 
         public UserServiceTest()
@@ -23,8 +24,9 @@ namespace FinancialControl.Application.Tests.Services
 
             _userRepositoryMock = new Mock<IUserRepository>();
             _encryptionServiceMock = new Mock<IEncryptionService>();
+            _validationEmailServiceMock = new Mock<IValidationEmailService>();
             _loggerMock = new Mock<ILogger<UserService>>();
-            _userService = new UserService(_userRepositoryMock.Object, _encryptionServiceMock.Object, _loggerMock.Object);
+            _userService = new UserService(_userRepositoryMock.Object, _encryptionServiceMock.Object, _validationEmailServiceMock.Object, _loggerMock.Object);
 
             _encryptionServiceMock.Setup(m => m.HashPassword(It.IsAny<string>())).Returns("HashedPassword");
         }

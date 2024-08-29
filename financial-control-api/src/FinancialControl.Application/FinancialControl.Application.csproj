@@ -2,11 +2,12 @@
 
   <ItemGroup>
     <ProjectReference Include="..\FinancialControl.Domain\FinancialControl.Domain.csproj" />
+    <ProjectReference Include="..\FinancialControl.Infra.Bus\FinancialControl.Infra.Bus.csproj" />
     <ProjectReference Include="..\FinancialControl.Infra\FinancialControl.Infra.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Dtos\User\Results\" />
+    <Folder Include="DTOs\User\Results\" />
   </ItemGroup>
 
   <ItemGroup>

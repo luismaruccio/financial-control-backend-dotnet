@@ -147,6 +147,24 @@ namespace FinancialControl.Infra.Tests.Repositories
             Assert.NotNull(validationCodeReturned);
         }
 
+        [Fact]
+        public async Task GetByPurpouseAndUserId_ShouldGetValidationCodeByPurpouseAndUserId()
+        {
+            var validationCode = new ValidationCode()
+            {
+                Code = "1234-5678",
+                UserId = _userId,
+                Purpose = ValidationCodePurpose.EmailValidation,
+                Expiration = DateTime.UtcNow.AddHours(1),
+            };
+
+            await _repository.AddAsync(validationCode);
+
+            var validationCodeReturned = await _repository.GetByPurpouseAndUserId(ValidationCodePurpose.EmailValidation, _userId);
+
+            Assert.NotNull(validationCodeReturned);
+        }
+
         private static async Task<int> PrepareDatabase(FinancialControlContext context)
         {
             var user = new User

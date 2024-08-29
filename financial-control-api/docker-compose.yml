@@ -14,6 +14,20 @@ services:
       - postgres-data:/var/lib/postgresql/data
     networks:
       - financial-control-network
+  
+  rabbitmq:
+    image: rabbitmq:3-management
+    container_name: financial-control-rabbitmq
+    environment:
+        RABBITMQ_DEFAULT_USER: guest
+        RABBITMQ_DEFAULT_PASS: guest
+    ports:
+        - "5672:5672"
+        - "15672:15672"
+    volumes:
+      - rabbitmq-data:/var/lib/rabbitmq
+    networks:
+        - financial-control-network
 
   financialcontrol.api:
     image: ${DOCKER_REGISTRY-}financialcontrolapi
@@ -23,15 +37,18 @@ services:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
       - DATABASE_CONNECTION_STRING=Host=financial-control-postgres;Port=5432;Database=FinancialControlDb;Username=finctrl;Password=pBsV0y975KFrxq9J
+      - RABBITMQ_CONNECTION_STRING=amqp://guest:guest@financial-control-rabbitmq:5672/
     ports:
       - "5000:80"
     networks:
       - financial-control-network
     depends_on:
       - postgres
+      - rabbitmq
 
 networks:
   financial-control-network:
 
 volumes:
   postgres-data:
+  rabbitmq-data:  
